@@ -3,7 +3,10 @@
 
 int main()
 {
-    char test[] = "Gamer Time (Because I'm a gamer ;))";
-    const char* Test = test;
-    std::cout << "The char array: " << Test << std::endl << "Hash: " << HashFunction::Default(Test, strlen(Test));
+    char tmp[] = "abc";
+    std::cout << "The char array: " << tmp << std::endl << "Hash: " << std::hex << HashFunction::Default(tmp, strlen(tmp)) << std::endl;
+    tmp[0] = 'c';
+    tmp[1] = 'b';
+    tmp[2] = 'a';
+    std::cout << "The char array: " << tmp << std::endl << "Hash: " << std::hex << HashFunction::Default(tmp, strlen(tmp)) << std::endl;
 }

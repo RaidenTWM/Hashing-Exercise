@@ -12,9 +12,9 @@ namespace HashFunction {
 		unsigned int hash = 0;
 		for (unsigned int i = 0; i <= length; ++i)
 		{
-			hash += data[i] * data[i] + 69;
+			hash = (hash << 5) - hash + data[i] * data[i]; 
+			hash &= 0xFFFFFFFF; //Masking 32 Bits
 		}
-		hash += hash % length;
 		return hash;
 	}
 }
