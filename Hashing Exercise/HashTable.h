@@ -1,24 +1,26 @@
 #pragma once
-#include "HashFunction.h"
-template<typename KeyType, typename T>
-class HashTable
-{
-public:
-	HashTable(unsigned int size) : m_size(size), m_data(new T[size]) {}
-	~HashTable() { delete[] m_data; }
+#include <iostream>
+#include <vector>
 
-	T& operator [] (const KeyType& key)
-	{
-		auto hashedKey = hash(key) % m_size;
-		return m_data[hashedkey];
-	}
+class HashTable {
 private:
-	T* m_data;
-	unsigned int m_size;
-	template<typename A, typename B>
-	struct Pair {
-		A first;
-		B second;
-	};
-};
+    struct HashNode {
+        const char* key;
+        int value;
+        HashNode(const char* k, int v) : key(k), value(v) {}
+    };
 
+    std::vector<HashNode*> table;
+    int capacity;
+    int size;
+
+    void resize();
+
+public:
+    HashTable();
+    ~HashTable();
+
+    void insert(const char* key, int value);
+    int get(const char* key);
+    void print();
+};
