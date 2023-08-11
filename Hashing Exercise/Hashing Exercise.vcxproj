@@ -135,6 +135,12 @@
     <ClInclude Include="HashFunction.h" />
     <ClInclude Include="HashTable.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Example.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Example2.bin" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

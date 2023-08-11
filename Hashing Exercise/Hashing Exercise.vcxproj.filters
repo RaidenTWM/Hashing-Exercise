@@ -33,4 +33,14 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Example.bin">
+      <Filter>Source Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Example2.bin">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>

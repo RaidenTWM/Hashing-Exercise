@@ -33,10 +33,10 @@ int main()
             std::this_thread::sleep_for(std::chrono::milliseconds(600));
             tempTable.print();
             std::this_thread::sleep_for(std::chrono::milliseconds(5000));
-            filename = "gamer.bin";
+            filename = "Example.bin";
             tempTable.insertFile(filename);
             std::this_thread::sleep_for(std::chrono::milliseconds(2000));
-            filename = "secret.bin";
+            filename = "Example2.bin";
             tempTable.insertFile(filename);
             std::this_thread::sleep_for(std::chrono::milliseconds(2000));
         }
